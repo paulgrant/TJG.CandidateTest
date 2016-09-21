@@ -53,13 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Stubs\FakeQuestionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestionServiceWebApi\QuestionRepositoryTests.cs" />
     <Compile Include="QuestionServiceWebApi\QuestionsControllerTests.cs" />
     <Compile Include="QuestionServiceWebApi\Stubs\FakeQuestionRepository.cs" />
     <Compile Include="Web\QuestionnaireControllerTests.cs" />
+    <Compile Include="Logic\QuestionServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

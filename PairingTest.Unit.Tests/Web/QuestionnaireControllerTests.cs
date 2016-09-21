@@ -8,10 +8,10 @@ namespace PairingTest.Unit.Tests.Web
     public class QuestionnaireControllerTests
     {
         [Test]
-        public void ShouldGetQuestions()
+        public void ShouldGetQuestionTitle()
         {
             //Arrange
-            var expectedTitle = "My expected quesitons";
+            var expectedTitle = "Geography Questions";
             var questionnaireController = new QuestionnaireController();
 
             //Act
@@ -19,6 +19,19 @@ namespace PairingTest.Unit.Tests.Web
             
             //Assert
             Assert.That(result.QuestionnaireTitle, Is.EqualTo(expectedTitle));
+        }
+
+        [Test]
+        public void ShouldGetQuestions()
+        {
+            //Arrange
+            var questionnaireController = new QuestionnaireController();
+
+            //Act
+            var result = (QuestionnaireViewModel)questionnaireController.Index().ViewData.Model;
+
+            //Assert
+            Assert.IsTrue(result.QuestionsText.Count > 0);
         }
     }
 }

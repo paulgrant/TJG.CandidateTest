@@ -4,7 +4,13 @@
     <head>
         <title>@Model.QuestionnaireTitle</title>
     </head>
-    <body>
-              
+<body>
+    <ol>
+        @foreach (string quesiton in Model.QuestionsText)
+        {
+            <li>@Html.Raw(quesiton)</li>
+        }
+        </ol>
     </body>
+
 </html>
